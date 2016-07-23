@@ -3,24 +3,19 @@ import { StyleSheet } from 'react-native';
 
 module.exports = StyleSheet.create({
   heading: {
-    fontSize: 20
+    fontSize: 35
   },
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    height: null,
-    width: null
+    alignItems: 'stretch'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  center: {
+    alignItems: 'center'
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  search: {
+    justifyContent: 'center',
+    padding: 1
   },
   button: {
     height:30,
@@ -29,8 +24,7 @@ module.exports = StyleSheet.create({
     borderRadius: 4,
     justifyContent: 'center',
     backgroundColor: '#2B68E6',
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: 'center'
   },
   linearGradient: {
     flex: 1,
@@ -45,5 +39,20 @@ module.exports = StyleSheet.create({
     margin: 10,
     color: '#ffffff',
     backgroundColor: 'transparent',
+  },
+  textEdit: {
+    height: 40,
+    borderColor: 'grey',
+    borderWidth: 1
+  },
+  location: {
+    flex: 1,
+    flexDirection: 'row'
+  },
+  city: {
+    width:50,
+    height: 40,
+    borderColor: 'grey',
+    borderWidth: 1
   }
 });
