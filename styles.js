@@ -3,12 +3,20 @@ import { StyleSheet } from 'react-native';
 
 module.exports = StyleSheet.create({
   heading: {
-    fontSize: 35
+    fontSize: 40,
+    color: 'white'
+  },
+  dataHead: {
+    color: 'white',
+    fontSize: 20,
+    textAlign: 'center'
   },
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    height: null,
+    width: null
   },
   center: {
     alignItems: 'center'
@@ -20,17 +28,14 @@ module.exports = StyleSheet.create({
   button: {
     height:30,
     padding:10,
+    margin:10,
     overflow:'hidden',
     borderRadius: 4,
     justifyContent: 'center',
-    backgroundColor: '#2B68E6',
-    alignItems: 'center'
-  },
-  linearGradient: {
-    flex: 1,
-    paddingLeft: 15,
-    paddingRight: 15,
-    borderRadius: 5
+    backgroundColor: 'transparent',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'white'
   },
   buttonText: {
     fontSize: 18,
@@ -41,9 +46,7 @@ module.exports = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   textEdit: {
-    height: 40,
-    borderColor: 'grey',
-    borderWidth: 1
+    height: 40
   },
   location: {
     flex: 1,
@@ -54,5 +57,20 @@ module.exports = StyleSheet.create({
     height: 40,
     borderColor: 'grey',
     borderWidth: 1
+  },
+  salaryLabel: {
+    marginLeft: 29,
+    marginRight: 29,
+    color: 'white'
+  },
+  salaryLabel2: {
+    marginLeft: 39,
+    marginRight: 39,
+    color: 'white'
+  },
+  chart: {
+    height: 300,
+    margin: 15,
+    opacity: 1
   }
 });

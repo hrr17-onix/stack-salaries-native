@@ -39,7 +39,6 @@ class stackSalaries extends Component {
   }
 }
 
-
 class Main extends Component {
 
   _navigate(name) {
@@ -53,7 +52,7 @@ class Main extends Component {
 
   render() {
     return (
-      <View style={ styles.container }>
+      <Image source={require('./background.png')} style={styles.container}>
         <View style={ styles.center }>
           <Text style={ styles.heading }>Stack Salaries</Text>
         </View>
@@ -61,7 +60,9 @@ class Main extends Component {
           <TextInput
             style={styles.textEdit}
             onChangeText={(text) => this.setState({text})}
-            placeholder="MongoDB, Expres, React, Node.js"
+            placeholder="MongoDB, Express, React, Node.js"
+            placeholderTextColor='white'
+            underlineColorAndroid='white'
           />
         </View>
         <View style = {styles.search}>
@@ -69,6 +70,8 @@ class Main extends Component {
             style={styles.textEdit}
             onChangeText={(text) => this.setState({text})}
             placeholder="San Francisco, CA"
+            placeholderTextColor='white'
+            underlineColorAndroid='white'
           />
         </View>
         <View style={styles.center}>
@@ -76,7 +79,7 @@ class Main extends Component {
             <Text style={ styles.buttonText }>Search!</Text>
           </TouchableHighlight>
         </View>
-      </View>
+      </Image>
     )
   }
 }
@@ -105,23 +108,32 @@ var data = [
 class Salary extends Component {
   render() {
     return (
-      <View style={ styles.container }>
-      <BarChart
+      <Image source={require('./background.png')} style={styles.container}>
+      <Text style={styles.dataHead}>Salaries for React in New York, NY</Text>
+        <BarChart
           dataSets={data}
           graduation={25}
           horizontal={false}
           showGrid={false}
           barSpacing={5}
-          style={{
-            height: 300,
-            margin: 15,
-          }}/>
-        <View style={ styles.center }>
-          <TouchableHighlight style={ styles.button } onPress={ () => this.props.navigator.push({name: "Main"}) }>
-            <Text style={ styles.buttonText }>Go Home</Text>
-          </TouchableHighlight>
-        </View>
+          style={styles.chart}
+        />
+      <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+        <Text style={styles.salaryLabel2}>85k</Text>
+        <Text style={styles.salaryLabel2}>106k</Text>
+        <Text style={styles.salaryLabel2}>140k</Text>
       </View>
+      <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+        <Text style={styles.salaryLabel}>Lowest</Text>
+        <Text style={styles.salaryLabel}>Average</Text>
+        <Text style={styles.salaryLabel}>Highest</Text>
+      </View>
+      <View style={ styles.center }>
+        <TouchableHighlight style={ styles.button } onPress={ () => this.props.navigator.push({name: "Main"}) }>
+          <Text style={ styles.buttonText }>Go Home</Text>
+        </TouchableHighlight>
+      </View>
+      </Image>
     )
   }
 }
