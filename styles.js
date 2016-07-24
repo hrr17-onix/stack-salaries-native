@@ -46,7 +46,9 @@ module.exports = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   textEdit: {
-    height: 40
+    height: 40,
+    marginLeft: 15,
+    marginRight: 15
   },
   location: {
     flex: 1,
